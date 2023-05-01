@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
         List<Integer>users = List.of(1,2,3,4);
         List<Integer>answers=List.of(2,4,5,6);
 
