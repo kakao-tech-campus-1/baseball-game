@@ -12,6 +12,15 @@ public class Main {
         Map<String, Integer> compare = compare(users, answers);
         System.out.println(compare.toString());
     }
+    
+    public Boolean duplicateBalls(List<Integer> baseballs){
+        Set<Integer> numSet = new HashSet<>(baseballs);
+
+        if(numSet.size() != baseballs.size()){
+            return false;
+        }
+        return true;
+    }
 
     public static Map<String, Integer> compare(List<Integer> users, List<Integer> answer) {
         int bulls = 0;
@@ -33,4 +42,5 @@ public class Main {
 
         return map;
     }
+   
 }
