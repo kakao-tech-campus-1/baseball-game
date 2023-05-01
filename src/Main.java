@@ -7,7 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
+        List<Integer>users = List.of(1,2,3,4);
+        List<Integer>answers=List.of(2,4,5,6);
 
+        Map<String, Integer> compare = compare(users, answers);
+        System.out.println(compare.toString());
     }
 
     public static Map<String, Integer> compare(List<Integer> users, List<Integer> answer) {
