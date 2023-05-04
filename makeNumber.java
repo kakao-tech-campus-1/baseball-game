@@ -1,6 +1,8 @@
 	public List<Integer> getInput(){
        		Scanner sc = new Scanner(System.in);
-        	int input=sc.nextInt();
+        	String input=sc.next();
+		int inputInt = Integer.parseInt(input);
+
         	List<Integer> inputList= new ArrayList<>();
         	int a = input / 1000 % 10;
         	int b = input / 100 % 10;
