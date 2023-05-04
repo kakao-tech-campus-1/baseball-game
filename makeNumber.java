@@ -1,58 +1,15 @@
-	public List<Integer> makeNumber() {
-		Random random = new Random();
-		random.setSeed(System.currentTimeMillis());
-		boolean isTrue = true;
-		
-		List<Integer> listArr = new ArrayList<>();
-		int one = random.nextInt(10);
-		listArr.add(one);
-		
-		for(;;) {
-			int two = random.nextInt(10);
-			if(listArr.get(0) == two) {
-				continue;
-			} else {
-				listArr.add(two);
-				break;
-			}
-		}
-		
-		int three = 0;
-		for(;;) {
-			isTrue = true;
-			three = random.nextInt(10);
-			for(int i=0; i<listArr.size(); i++) {
-				if(listArr.get(i) == three) {
-					isTrue = false;
-					break;
-				}
-			}
-			if(isTrue == false) {
-				continue;
-			}
-			
-				listArr.add(three);
-				break;
-		}
-		
-		
-		int four = 0;
-		for(;;) {
-			isTrue = true;
-			four = random.nextInt(10);
-			for(int i=0; i<listArr.size(); i++) {
-				if(listArr.get(i) == four) {
-					isTrue = false;
-					break;
-				}
-			}
-			if(isTrue == false) {
-				continue;
-			}
-				listArr.add(four);
-				break;
-		}
-		return listArr;
-
-	}
+	public List<Integer> getInput(){
+       		Scanner sc = new Scanner(System.in);
+        	int input=sc.nextInt();
+        	List<Integer> inputList= new ArrayList<>();
+        	int a = input / 1000 % 10;
+        	int b = input / 100 % 10;
+        	int c = input / 10 % 10;
+        	int d = input  % 10;
+        	inputList.add(a);
+        	inputList.add(b);
+        	inputList.add(c);
+        	inputList.add(d);
+        	return inputList;
+    	}
 
